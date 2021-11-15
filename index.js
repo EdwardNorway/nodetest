@@ -11,6 +11,8 @@ app.use('/', function(req, res) {
     res.send('todo api works.test by deng');
 });
 const server = http.createServer(app);
-const port = 3000;  //Environment.port || 3000;
+const port = process.env.PORT || 3000;
+console.log('env: ' + process.env);
+console.log('PORT = ' + process.env.PORT);
 server.listen(port);
 console.debug('Server listening on port ' + port + ' ...');
